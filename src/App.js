@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
+import Title from "./components/Title";
+import Date from "./components/Date";
+import Image from "./components/Image";
 
 function App() {
 
@@ -21,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-
+      
     </div>
   );
 }
