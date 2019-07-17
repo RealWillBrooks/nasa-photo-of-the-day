@@ -5,5 +5,5 @@ export default function Date(props) {
         <div>
             <h3>Date: {props.nasaData.date}</h3>
         </div>
-    )
+    );
 }
