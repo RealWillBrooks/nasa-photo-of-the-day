@@ -13,15 +13,15 @@ function App() {
       .get(`https://api.nasa.gov/planetary/apod?api_key=vHQVbvkufEhu1CRrQoED2OBGmcinri8RlKdGb4U8`)
       .then(res => {
         console.log(res.data);
-        setNasaData(res.data.hdurl);
+        setNasaData(res.data);
       })
       .then(console.log(nasaData))
       .catch(err => console.log(err));
-  }, [nasaData]);
+  }, []);
 
   return (
     <div className="App">
-      
+
     </div>
   );
 }
