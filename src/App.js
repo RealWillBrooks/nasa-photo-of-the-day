@@ -7,10 +7,10 @@ import Media from './Media';
 import Description from './Description';
 
 function App() {
-  const [nasaData, setNasaData] = useState({});
+  const [NasaData, setNasaData] = useState({});
   
   const fetchData = () => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=vHQVbvkufEhu1CRrQoED2OBGmcinri8RlKdGb4U8$`)
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
     .then(res => {
           setNasaData(res.data)
     })
@@ -20,14 +20,14 @@ function App() {
   useEffect( () => {
       fetchData();
   }, []) 
-console.log(nasaData)
+console.log(NasaData)
 
   return (
     <div className="App">
-      <Title nasaData={nasaData} />
-      <Date nasaData={nasaData} />
-      <Media nasaData={nasaData} />
-      <Description nasaData={nasaData} />
+      <Title NasaData={NasaData} />
+      <Date NasaData={NasaData} />
+      <Media NasaData={NasaData} />
+      <Description NasaData={NasaData} />
     </div>
   );
 }

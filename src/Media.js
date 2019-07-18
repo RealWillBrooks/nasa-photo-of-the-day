@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 export default function Media(props) {
    return (
        <div>
-           {props.nasaData.media_type === 'video' ? <ReactPlayer url={props.nasaData.url} /> : <img src={props.nasaData.hdurl} alt={props.nasaData.title} width={'480px'} /> }
+           {props.NasaData.media_type === 'video' ? <ReactPlayer url={props.NasaData.url} /> : <img src={props.NasaData.hdurl} alt={props.NasaData.title} width={'480px'} /> }
        </div>
    );
 }
