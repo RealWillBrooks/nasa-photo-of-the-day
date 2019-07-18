@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import Title from "./src/components/Title";
-import Date from "./src/components/Date";
-import Media from "./src/components/Media";
+import Title from './Title';
+import Date from './Date';
+import Media from './Media';
+import Description from './Description';
 
 function App() {
-  const [nasaData, setNasaData] = useState([]);
+  const [nasaData, setNasaData] = useState({});
   
   const fetchData = () => {
-    axios
-    .get(`https://api.nasa.gov/planetary/apod?api_key=vHQVbvkufEhu1CRrQoED2OBGmcinri8RlKdGb4U8$`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=vHQVbvkufEhu1CRrQoED2OBGmcinri8RlKdGb4U8$`)
     .then(res => {
           setNasaData(res.data)
     })
